@@ -42,11 +42,6 @@ h1
   display: inline-block;
   margin: 1em auto;
 }
-#boxx
-{
-  align-content:center;
-  padding-left: 50%;
-}
 .fa-microphone
 {
   text-decoration: none;
