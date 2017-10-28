@@ -13,7 +13,7 @@
   </head>
   <body>
     <h1>Tell Us your Mood</h1><br>
-    <textarea id="transcription" readonly="readonly"></textarea>
+    <!--<textarea id="transcription" readonly="readonly"></textarea>-->
     
         
    <label id="boxx"><input type="radio" name="recognition-type" value="interim" checked="true"></label> 
@@ -32,6 +32,7 @@
     <span id="ws-unsupported" class="hidden">API not supported</span>
     <script>
     	 // Test browser support
+      var string
       window.SpeechRecognition = window.SpeechRecognition       ||
                                  window.webkitSpeechRecognition ||
                                  null;
@@ -50,13 +51,13 @@
 
         // Start recognising
         recognizer.onresult = function(event) {
-          transcription.textContent = '';
+          string = '';
 
           for (var i = event.resultIndex; i < event.results.length; i++) {
             if (event.results[i].isFinal) {
-              transcription.textContent = event.results[i][0].transcript;
+              string = event.results[i][0].transcript;
             } else {
-              transcription.textContent += event.results[i][0].transcript;
+              string += event.results[i][0].transcript;
             }
           }
         };
@@ -87,11 +88,11 @@
         });
 
         document.getElementById('clear-all').addEventListener('click', function() {
-          transcription.textContent = '';
+          string = '';
           log.textContent = '';
         });
       }
-
+      alert(string)
     </script>
     <script type="text/javascript" src=""></script>
   </body>
