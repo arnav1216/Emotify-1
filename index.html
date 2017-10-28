@@ -78,6 +78,7 @@
             alert("llll");
               recognizer.stop();
               alert("yoyo"); 
+              foo();
             },5000);
             
             
@@ -97,8 +98,11 @@
           log.textContent = '';
         });
       }
-      alert("yoyoyoy");
-      alert(string);
+      function foo()
+      {
+         alert("yoyoyoy");
+         alert(string);
+      }
     </script>
     <script type="text/javascript" src=""></script>
   </body>
