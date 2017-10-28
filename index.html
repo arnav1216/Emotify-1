@@ -32,7 +32,6 @@
     <span id="ws-unsupported" class="hidden">API not supported</span>
     <script>
     	 // Test browser support
-      alert("hiiii21333333321i");
       var string;
       window.SpeechRecognition = window.SpeechRecognition       ||
                                  window.webkitSpeechRecognition ||
@@ -75,11 +74,9 @@
           try {
             recognizer.start();
             setTimeout(function(){
-            alert("llll");
               recognizer.stop();
-              alert("yoyo"); 
               foo();
-            },5000);
+            },4000);
             
             
           } catch(ex) {
@@ -100,7 +97,6 @@
       }
       function foo()
       {
-         alert("yoyoyoy");
          alert(string);
       }
     </script>
