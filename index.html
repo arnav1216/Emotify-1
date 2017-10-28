@@ -16,7 +16,7 @@
     <!--<textarea id="transcription" readonly="readonly"></textarea>-->
     
         
-   <label id="boxx"><input type="radio" name="recognition-type" value="interim" checked="true"></label> 
+   <!--<label id="boxx"><input type="radio" name="recognition-type" value="interim" checked="true"></label> -->
 
 <!--     <h3>Log</h3>
     <div id="log"></div> -->
@@ -69,7 +69,7 @@
 
         document.getElementById('button-play-ws').addEventListener('click', function() {
           // Set if we need interim results
-          recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
+       //   recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
 
           try {
             recognizer.start();
