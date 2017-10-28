@@ -1,3 +1,3 @@
-$(document).ready(function() {
-	alert("Connected")
+$(document).ready(function(){
+	alert("Connected");
 });
