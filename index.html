@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Moodify</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://use.fontawesome.com/e61bd2e842.js"></script>
+
+
+  </head>
+  <body>
+    <h1>Tell Us your Mood</h1><br>
+    <h2>Transcription</h2>
+    <textarea id="transcription" readonly="readonly"></textarea>
+    
+        
+   <label id="boxx"><input type="radio" name="recognition-type" value="interim" checked="true"></label> 
+
+<!--     <h3>Log</h3>
+    <div id="log"></div> -->
+
+    <div class="buttons-wrapper">
+    <a href ="#" class="button-demo" id="button-play-ws"><i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+</a>
+     
+      <!-- <button id="button-stop-ws" class="button-demo">Stop demo</button> -->
+      <!--<button id="clear-all" class="button-demo">Clear all</button>-->
+    </div>
+    
+    <span id="ws-unsupported" class="hidden">API not supported</span>
+    <script>
+    	 // Test browser support
+      window.SpeechRecognition = window.SpeechRecognition       ||
+                                 window.webkitSpeechRecognition ||
+                                 null;
+
+      if (window.SpeechRecognition === null) {
+        document.getElementById('ws-unsupported').classList.remove('hidden');
+        document.getElementById('button-play-ws').setAttribute('disabled', 'disabled');
+        document.getElementById('button-stop-ws').setAttribute('disabled', 'disabled');
+      } else {
+        var recognizer = new window.SpeechRecognition();
+        var transcription = document.getElementById('transcription');
+        var log = document.getElementById('log');
+
+        // Recogniser doesn't stop listening even if the user pauses
+        recognizer.continuous = true;
+
+        // Start recognising
+        recognizer.onresult = function(event) {
+          transcription.textContent = '';
+
+          for (var i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+              transcription.textContent = event.results[i][0].transcript;
+            } else {
+              transcription.textContent += event.results[i][0].transcript;
+            }
+          }
+        };
+
+        // Listen for errors
+        recognizer.onerror = function(event) {
+          log.innerHTML = 'Recognition error: ' + event.message + '<br />' + log.innerHTML;
+        };
+
+        document.getElementById('button-play-ws').addEventListener('click', function() {
+          // Set if we need interim results
+          recognizer.interimResults = document.querySelector('input[name="recognition-type"][value="interim"]').checked;
+
+          try {
+            recognizer.start();
+            log.innerHTML = 'Recognition started' + '<br />' + log.innerHTML;
+            setTimeout(function(){
+              recognizer.stop();
+            },5000);
+          } catch(ex) {
+            log.innerHTML = 'Recognition error: ' + ex.message + '<br />' + log.innerHTML;
+          }
+        });
+
+        document.getElementById('button-stop-ws').addEventListener('click', function() {
+          recognizer.stop();
+          log.innerHTML = 'Recognition stopped' + '<br />' + log.innerHTML;
+        });
+
+        document.getElementById('clear-all').addEventListener('click', function() {
+          transcription.textContent = '';
+          log.textContent = '';
+        });
+      }
+
+    </script>
+    <script type="text/javascript" src=""></script>
+  </body>
+</html>
