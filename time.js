@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	alert("Connected");
+}
 	$('body').Geometryangle({
 // handle transparent colors
 mesh:{
