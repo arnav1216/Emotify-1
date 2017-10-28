@@ -74,12 +74,13 @@
           try {
             recognizer.start();
             log.innerHTML = 'Recognition started' + '<br />' + log.innerHTML;
-            setTimeout(function(){
-              recognizer.stop();
-            },5000);
+            
           } catch(ex) {
             log.innerHTML = 'Recognition error: ' + ex.message + '<br />' + log.innerHTML;
           }
+          setTimeout(function(){
+              recognizer.stop();
+            },5000);
         });
 
         document.getElementById('button-stop-ws').addEventListener('click', function() {
