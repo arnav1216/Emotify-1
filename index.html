@@ -43,7 +43,7 @@
       if (window.SpeechRecognition === null) {
         document.getElementById('ws-unsupported').classList.remove('hidden');
         document.getElementById('button-play-ws').setAttribute('disabled', 'disabled');
-        document.getElementById('button-stop-ws').setAttribute('disabled', 'disabled');
+       // document.getElementById('button-stop-ws').setAttribute('disabled', 'disabled');
       } else {
         var recognizer = new window.SpeechRecognition();
         var transcription = document.getElementById('transcription');
@@ -88,15 +88,15 @@
 
         });
 
-        document.getElementById('button-stop-ws').addEventListener('click', function() {
-          recognizer.stop();
-          log.innerHTML = 'Recognition stopped' + '<br />' + log.innerHTML;
-        });
+        //document.getElementById('button-stop-ws').addEventListener('click', function() {
+          //recognizer.stop();
+          //log.innerHTML = 'Recognition stopped' + '<br />' + log.innerHTML;
+        //});
 
-        document.getElementById('clear-all').addEventListener('click', function() {
-          string = '';
-          log.textContent = '';
-        });
+       // document.getElementById('clear-all').addEventListener('click', function() {
+         // string = '';
+         // log.textContent = '';
+        //});
       }
       function foo()
       {
