@@ -74,16 +74,17 @@
 
           try {
             recognizer.start();
-            log.innerHTML = 'Recognition started' + '<br />' + log.innerHTML;
-            
-          } catch(ex) {
-            log.innerHTML = 'Recognition error: ' + ex.message + '<br />' + log.innerHTML;
-          }
-          setTimeout(function(){
+            setTimeout(function(){
             alert("llll");
               recognizer.stop();
               alert("yoyo"); 
             },5000);
+            
+            
+          } catch(ex) {
+            
+          }
+
         });
 
         document.getElementById('button-stop-ws').addEventListener('click', function() {
