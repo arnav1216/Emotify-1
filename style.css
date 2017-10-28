@@ -5,6 +5,7 @@ body
   height:100vh;
   max-width: 500px;
   margin: 2em auto;
+  margin-top : 50%;
   font-size: 20px;
   font-family: 'PT Sans', sans-serif;
    background: #74ebd5; /* fallback for old browsers */
