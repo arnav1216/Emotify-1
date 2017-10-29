@@ -58,3 +58,7 @@ h1
   text-decoration: none;
   color: grey;
 }
+.fa-microphone:hover
+{
+  color:orange;
+}
