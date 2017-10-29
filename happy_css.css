@@ -1,0 +1,19 @@
+.vid{
+  padding-top: 135px;
+}
+#h2,#h3{
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+}
+#yoo2,#yoo3{
+  margin-left : 50px;
+}
+#yoo1{
+  margin-left: 80px;
+}
+body{
+ font-family: 'PT Sans', sans-serif;
+  background-image:url("happy.png");
+  background-position:absolute;
+  background-size:cover:
+}
