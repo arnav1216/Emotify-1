@@ -99,11 +99,33 @@
       {
          alert(string);
 	 var one = string.search("angry");
-	      alert("Connect");
 	 if(one>=0)
 	 {
-		 alert("Connect");
-		var url = "one.html";
+		var url = "angry.html";
+		 $(location).attr('href',url);
+	 }
+	 var one = string.search("sad");
+	 if(one>=0)
+	 {
+		var url = "sad.html";
+		 $(location).attr('href',url);
+	 }
+	 var one = string.search("happy");
+	 if(one>=0)
+	 {
+		var url = "happy.html";
+		 $(location).attr('href',url);
+	 }
+	 var one = string.search("relaxed");
+	 if(one>=0)
+	 {
+		var url = "relaxed.html";
+		 $(location).attr('href',url);
+	 }
+	 var one = string.search("excited");
+	 if(one>=0)
+	 {
+		var url = "excited.html";
 		 $(location).attr('href',url);
 	 }
       }
