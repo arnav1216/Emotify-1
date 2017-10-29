@@ -32,7 +32,7 @@
     <script>
        // Test browser support
     //  alert("hii");
-      var string;
+      var string = "try again";
       window.SpeechRecognition = window.SpeechRecognition       ||
                                  window.webkitSpeechRecognition ||
                                  null;
@@ -97,9 +97,7 @@
       }
       function foo()
       {
-	      if(string.equals('')==true)
-		      alert("Reload and try again");
-	      alert("winter");
+	      alert(string);
 	 var one = string.search("angry");
 	 if(one>=0)
 	 {
