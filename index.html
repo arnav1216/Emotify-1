@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Moodify</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="style.css">
 
 <script src="https://use.fontawesome.com/e61bd2e842.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
+  
+</head>
 
+<body>
 
-  </head>
-  <body>
-    <h1>Tell Us your Mood</h1><br>
-    <!--<textarea id="transcription" readonly="readonly"></textarea>-->
+	<h1>Tell Us your Mood</h1><br>
+	    <div class="buttons-wrapper">
+  				  <a href ="#" class="button-demo" id="button-play-ws"><i class="fa fa-microphone fa-2x" aria-hidden="true"></i></a>
+    	</div>
     
-        
-   <!--<label id="boxx"><input type="radio" name="recognition-type" value="interim" checked="true"></label> -->
-
-<!--     <h3>Log</h3>
-    <div id="log"></div> -->
-
-    <div class="buttons-wrapper">
-    <a href ="#" class="button-demo" id="button-play-ws"><i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
-</a>
-     
-      <!-- <button id="button-stop-ws" class="button-demo">Stop demo</button> -->
-      <!--<button id="clear-all" class="button-demo">Clear all</button>-->
-    </div>
-    
-    <span id="ws-unsupported" class="hidden">API not supported</span>
+   		<span id="ws-unsupported" class="hidden">API not supported</span>
+  
     <script>
-    	 // Test browser support
-      alert("hii");
+       // Test browser support
+    //  alert("hii");
       var string;
       window.SpeechRecognition = window.SpeechRecognition       ||
                                  window.webkitSpeechRecognition ||
@@ -43,7 +41,7 @@
       if (window.SpeechRecognition === null) {
         document.getElementById('ws-unsupported').classList.remove('hidden');
         document.getElementById('button-play-ws').setAttribute('disabled', 'disabled');
-       // document.getElementById('button-stop-ws').setAttribute('disabled', 'disabled');
+        document.getElementById('button-stop-ws').setAttribute('disabled', 'disabled');
       } else {
         var recognizer = new window.SpeechRecognition();
         var transcription = document.getElementById('transcription');
@@ -88,21 +86,27 @@
 
         });
 
-        //document.getElementById('button-stop-ws').addEventListener('click', function() {
-          //recognizer.stop();
-          //log.innerHTML = 'Recognition stopped' + '<br />' + log.innerHTML;
-        //});
+        document.getElementById('button-stop-ws').addEventListener('click', function() {
+          recognizer.stop();
+          log.innerHTML = 'Recognition stopped' + '<br />' + log.innerHTML;
+        });
 
-       // document.getElementById('clear-all').addEventListener('click', function() {
-         // string = '';
-         // log.textContent = '';
-        //});
+        document.getElementById('clear-all').addEventListener('click', function() {
+          string = '';
+          log.textContent = '';
+        });
       }
       function foo()
       {
          alert(string);
       }
     </script>
-    <script type="text/javascript" src="time.js"></script>
-  </body>
+    
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='https://salesportal.aptaracorp.com/PPDI/POC/js/geometry/geometryangle.js'></script>
+	<script  src="js/index.js"></script>
+
+</body>
 </html>
