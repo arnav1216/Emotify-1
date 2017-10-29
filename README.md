@@ -7,11 +7,11 @@ Emotify is a WebApp which analyses the mood you are in and suggests you with sui
 Hope this idea is of some use to you!
 
 How Emotify works?
-1. Open new tab in Google Chrome
+1. Open the site "https://harshit2202.github.io/Emotify/index.html"..
 2. Click on the voice identification icon and speak out the mood you are in.
 	eg: "I am happy/sad/excited/relaxed/angry".
-2. Videos will appear to soothe your current mood.
-3. Each time you refresh the page a new set of three songs will appear.
+3. Videos will appear to soothe your current mood.
+4. Each time you refresh the page a new set of three songs will appear.
 
 ### Contributors:- 
 - Anagh Rao
