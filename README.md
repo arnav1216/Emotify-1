@@ -13,9 +13,9 @@ How Emotify works?
 2. Videos will appear to soothe your current mood.
 3. Each time you refresh the page a new set of three songs will appear.
 
-Contributors:- 
-Anagh Rao
-Harshit Agarwal
-Prathmesh Pathwar
-Anmol Singh Sethi
-Arnav Agarwal
+### Contributors:- 
+- Anagh Rao
+- Harshit Agarwal
+- Prathmesh Pathwar
+- Anmol Singh Sethi
+- Arnav Agarwal
