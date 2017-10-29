@@ -100,3 +100,5 @@ vertex: {
 
 }
 });
+
+document.getquerySelector(.fa-microphone).classList.add("bounceIn animated");
