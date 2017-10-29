@@ -13,19 +13,19 @@ var angry_link10 = "https://www.youtube.com/embed/AbPED9bisSc";
 var angry = [angry_link1, angry_link2, angry_link3, angry_link4, angry_link5, angry_link6, angry_link7, angry_link8, angry_link9];
 
 var one;
-one = Math.random()*10;
+one = Math.random()*9;
 one1 = Math.floor(one);
 
 document.getElementById("yoo1").setAttribute("src",angry[one1]);
 
 var two;
-two = Math.random()*10;
+two = Math.random()*9;
 two2 = Math.floor(two);
 
 document.getElementById("yoo2").setAttribute("src",angry[two2]);
 
 var three;
-three = Math.random()*10;
+three = Math.random()*9;
 three3 = Math.floor(three);
 
 document.getElementById("yoo3").setAttribute("src",angry[three3]);
