@@ -17,19 +17,16 @@ one = Math.random()*10;
 one1 = Math.floor(one);
 
 angry[one1] = angry[one1] + "?autoplay=0";
-alert(angry[one1]);
 document.getElementById("yoo1").setAttribute("src",angry[one1]);
 
 var two;
 two = Math.random()*10;
 two2 = Math.floor(two);
 
-alert(two2);
 document.getElementById("yoo2").setAttribute("src",angry[two2]);
 
 var three;
 three = Math.random()*10;
 three3 = Math.floor(three);
 
-alert(three3);
 document.getElementById("yoo3").setAttribute("src",angry[three3]);
