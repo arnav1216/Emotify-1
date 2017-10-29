@@ -1,5 +1,9 @@
 .vid{
-  padding-top: 170px;
+  padding-top: 1350px;
+}
+#h2,#h3{
+  text-align: center;
+  color: rgba(255,255,255,0.5);
 }
 #yoo2,#yoo3{
   margin-left : 50px;
@@ -12,12 +16,4 @@ body{
   background-image:url("angry.png");
   background-position:absolute;
   background-size:cover:
-}
-h1
-{
- text-align:center; 
-}
-h3
-{
-  text-align:center;
 }
