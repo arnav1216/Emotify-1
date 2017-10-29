@@ -9,5 +9,7 @@
 }
 body{
  font-family: 'PT Sans', sans-serif;
-  background-image:url('angry.png');
+  background-image:url("angry.png");
+  background-position:absolute;
+  background-size:cover:
 }
