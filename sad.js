@@ -1,5 +1,5 @@
 //alert("Connected");
-var angry_link1 = "https://www.youtube.com/embed/1G4isv_Fylg&list=PL88534134DDA83D46&index=2  ";
+var angry_link1 = "https://www.youtube.com/embed/GemKqzILV4w";
 var angry_link2 = "https://www.youtube.com/embed/KtlgYxa6BMU";
 var angry_link3 = "https://www.youtube.com/embed/YQHsXMglC9A";
 var angry_link4 = "https://www.youtube.com/embed/hLQl3WQQoQ0";
