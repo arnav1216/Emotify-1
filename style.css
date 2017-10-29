@@ -47,6 +47,12 @@ h1
   display: inline-block;
   margin: 1em auto;
 }
+
+.button-demo:hover
+{
+  color:  orange;
+}
+
 .fa-microphone
 {
   text-decoration: none;
