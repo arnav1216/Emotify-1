@@ -21,11 +21,13 @@ document.getElementById("yoo1").setAttribute("src",angry[one1]);
 var two;
 two = Math.random()*9;
 two2 = Math.floor(two);
-
+if(two2 ==one1)
+  two2 = (two2 + 1)%9;
 document.getElementById("yoo2").setAttribute("src",angry[two2]);
 
 var three;
 three = Math.random()*9;
 three3 = Math.floor(three);
-
+while(three3 == two2 || three3 == one1)
+  three3 = (three3+1)%9;
 document.getElementById("yoo3").setAttribute("src",angry[three3]);
