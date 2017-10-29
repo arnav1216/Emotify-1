@@ -30,7 +30,7 @@
     	</div>
     
    		<span id="ws-unsupported" class="hidden">API not supported</span>
-  
+  	<p id="demoo" style="color:white;"></p>
     <script>
        // Test browser support
     //  alert("hii");
@@ -99,7 +99,7 @@
       }
       function foo()
       {
-	      alert(string);
+	      document.getElementById("demoo").innerHTML = string;
 	 var one = string.search("angry");
 	 if(one>=0)
 	 {
